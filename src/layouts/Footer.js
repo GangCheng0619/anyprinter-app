@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  TextWrapper,
   FooterContainer,
   FooterSection,
   FooterSocialLink,
@@ -17,9 +18,11 @@ const Footer = () => {
     <FooterSection>
       <div className="col-md-9">
         <FooterContainer>
-          <Text mode="span" fSize={13} fColor="white" fWeight={400}>
-            2021 @AnyPrinter
-          </Text>
+          <TextWrapper>
+            <Text mode="span" fSize={13} fColor="white" fWeight={400}>
+              2021 @AnyPrinter
+            </Text>
+          </TextWrapper>
           <FooterSocialLink>
             <SocialLink>
               <img src={facebook} alt="facebook" />

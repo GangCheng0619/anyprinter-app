@@ -5,14 +5,17 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  font-size: 20px !important;
 `;
 
 export const BeeShape = styled.div`
   position: absolute;
   bottom: -20px;
   left: -9.4vw;
-  background-image: url("../../assets/img/bee.png");
   opacity: 0.5;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const HomeAuth = styled.div`
@@ -27,6 +30,28 @@ export const SectionMain = styled.div`
   align-items: center;
   padding: 12vh 0 6.4vh;
   grid-gap: 3vw;
+  @media only screen and (width: 320px) {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 250px;
+    }
+  }
+  @media only screen and (width: 768px) {
+    img {
+      width: 290px;
+    }
+  }
+  @media only screen and (width: 1024px) {
+    img {
+      width: 400px;
+    }
+  }
+  @media only screen and (width: 1440px) {
+    img {
+      width: 540px;
+    }
+  }
 `;
 
 export const ItemDescPart = styled.div`
@@ -35,6 +60,9 @@ export const ItemDescPart = styled.div`
   justify-content: center;
   align-items: flex-start;
   grid-gap: 30px;
+  @media only screen and (width: 320px) {
+    align-items: center;
+  }
 `;
 
 export const MainTitle = styled.div`
@@ -53,6 +81,10 @@ export const SectionFooter = styled.div`
   align-items: center;
   grid-gap: 2vw;
   margin-bottom: 9vh;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    grid-gap: none;
+  }
 `;
 
 export const BalanceBox = styled.div`
@@ -63,6 +95,18 @@ export const BalanceBox = styled.div`
   padding: 15px;
   grid-gap: 15px;
   width: 22vw;
+  @media only screen and (width: 320px) {
+    width: 75vw;
+    grid-gap: none;
+  }
+  @media only screen and (width: 768px) {
+    width: 50vw;
+    grid-gap: none;
+  }
+  @media only screen and (width: 1024px) {
+    width: 30vw;
+    grid-gap: none;
+  }
 `;
 
 export const BalanceSymbol = styled.div`
@@ -71,6 +115,16 @@ export const BalanceSymbol = styled.div`
   background-color: #212428;
   border-radius: 6px;
   padding: 15px;
+  @media only screen and (width: 768px) {
+    img {
+      width: 50px;
+    }
+  }
+  @media only screen and (width: 320px) {
+    img {
+      width: 50px;
+    }
+  }
 `;
 
 export const BalanceInfo = styled.div`
@@ -85,18 +139,16 @@ export const BalanceName = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 15px 15px 5px;
+  @media only screen and (width: 768px) {
+    padding: 10px 10px 5px;
+  }
 `;
 
 export const BalanceAmount = styled.div`
   display: flex;
   justify-content: flex-start;
-  padding: 7px;
+  padding: 5px;
   background-color: #1e51bf;
   border-radius: 6px;
   width: 90%;
-  
-  @media only screen and (min-width: 768px) {
-
-}
 `;
-

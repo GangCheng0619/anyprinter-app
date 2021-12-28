@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import headerback from "../assets/img/headerbackground.png";
 
 /* Header Section */
 
@@ -8,8 +9,8 @@ export const HeaderSection = styled.div`
   align-items: center;
   height: auto;
   padding: 10px 20px;
-  background-image: url("../assets/img/headerbackground.png");
-  background-color: rgb(50, 2, 122);
+  background: url(${headerback});
+  background-color: rgb(50 2 122);
   border-radius: 8px;
 `;
 
@@ -49,4 +50,10 @@ export const SocialLink = styled.div`
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
+`;
+
+export const TextWrapper = styled.div`
+  @media only screen and (width: 320px) {
+    display: none;
+  }
 `;

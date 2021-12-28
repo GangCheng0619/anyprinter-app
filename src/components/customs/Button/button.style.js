@@ -5,6 +5,7 @@ import { themeGet } from "@styled-system/theme-get";
 
 // -------------------------------------------------------
 export const ButtonWrapper = styled.div`
+  display: flex;
   ${({ fSize }) => (fSize ? `font-size: ${fSize}px` : "")};
   ${({ fWeight }) => (fWeight ? `font-weight: ${fWeight}` : "")};
   ${({ tAlign }) => (tAlign ? `text-align: ${tAlign}` : "")};
@@ -12,12 +13,13 @@ export const ButtonWrapper = styled.div`
   ${({ tTransForm }) => (tTransForm ? ` text-transform: ${tTransForm}` : "")};
   ${({ lHeight }) => (lHeight ? `line-height: ${lHeight}px` : "")};
   ${({ tSpacing }) => (tSpacing ? `letter-spacing: ${tSpacing}rem` : "")};
+  ${({ jContent }) => (jContent ? `justify-content: ${jContent}` : "")};
+  ${({ aItems }) => (aItems ? `align-items: ${aItems}` : "")};
+  ${({ gGap }) => (gGap ? `grid-gap: ${gGap}px` : "")};
   ${({ mWidth }) => (mWidth ? `max-width: ${mWidth}%` : "")};
   ${({ cursor }) => (cursor ? `cursor: ${cursor}` : "")};
   ${({ bRadius }) => (bRadius ? `border-radius: ${bRadius}px` : "")};
   ${({ bgColor }) => (bgColor ? `background-color: ${bgColor}` : "")};
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   color: ${({ fColor }) => fColor} !important;
   font-family: ${({ tFont }) => themeGet(`fonts.${tFont}`, "")};
   ${({ tDecorations }) =>

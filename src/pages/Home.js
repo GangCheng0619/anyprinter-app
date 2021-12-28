@@ -42,6 +42,20 @@ const Home = () => {
                   fWeight={700}
                   fColor="white"
                   tSpacing={0.05}
+                  responsive={{
+                    768: {
+                      fSize: 35,
+                      lHeight: 40,
+                      tSpacing: 0.03,
+                    },
+                    1024: { fSize: 50, lHeight: 50, tSpacing: 0.03 },
+                    320: {
+                      fSize: 30,
+                      lHeight: 40,
+                      tSpacing: 0.02,
+                      tAlign: "center",
+                    },
+                  }}
                 >
                   Create, sell or collect{" "}
                   <Text mode="span" fColor="#447cf5">
@@ -49,7 +63,16 @@ const Home = () => {
                   </Text>
                 </Text>
               </MainTitle>
-              <Text mode="span" fSize={15} fColor="white">
+              <Text
+                mode="span"
+                fSize={15}
+                fColor="white"
+                responsive={{
+                  320: {
+                    tAlign: "center",
+                  },
+                }}
+              >
                 Lorem lpsum is simply dummy text of the printing and type
                 setting industry. Leorem lpsum has been the industry's standard
                 dummy text ever since the 1500s, when an unknown printer took a
