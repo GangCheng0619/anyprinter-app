@@ -1,5 +1,6 @@
 import React from "react";
-import { HeaderSection, HeaderUtils, TextWrapper } from "./styles";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { HeaderSection, HeaderUtils, LogoBtn, TextWrapper } from "./styles";
 import Button from "../components/customs/Button";
 import Text from "../components/customs/Text";
 
@@ -9,9 +10,17 @@ import rabbit from "../assets/img/rabbit.png";
 import wallet from "../assets/img/wallet.png";
 
 const Header = () => {
+  let history = useHistory();
+
+  const toHome = () => {
+    history.push("/");
+  };
+
   return (
     <HeaderSection>
-      <img src={logo} alt="logo" width={60} />
+      <LogoBtn onClick={toHome}>
+        <img src={logo} alt="logo" width={60} />
+      </LogoBtn>
       <HeaderUtils>
         <Button
           bgColor="#FF636B"

@@ -14,6 +14,14 @@ export const HeaderSection = styled.div`
   border-radius: 8px;
 `;
 
+export const LogoBtn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  cursor: pointer;
+`;
+
 export const HeaderUtils = styled.div`
   display: flex;
   justify-content: center;

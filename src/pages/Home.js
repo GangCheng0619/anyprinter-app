@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import {
   BalanceInfo,
   BalanceName,
@@ -23,6 +24,13 @@ import tokensymbol from "../assets/img/tokensymbol.png";
 import beeshape from "../assets/img/bee-shape.png";
 
 const Home = () => {
+  let history = useHistory();
+
+  const toDashboard = () => {
+    console.log("Here");
+    history.push("/dashboard");
+  };
+
   return (
     <Container>
       <div className="col-md-9">
@@ -84,6 +92,7 @@ const Home = () => {
                 padding={10}
                 fColor="white"
                 cursor="pointer"
+                onClick={toDashboard}
               >
                 <Text mode="span" fColor="white" fSize={14}>
                   Go to Dashboard
