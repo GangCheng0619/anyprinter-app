@@ -9,6 +9,26 @@ export const Container = styled.div`
   padding: 2vh 0 0;
 `;
 
+export const BeeLeft = styled.div`
+  position: absolute;
+  top: 32.5vh;
+  left: -9.4vw;
+  opacity: 0.5;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const BeeRight = styled.div`
+  position: absolute;
+  bottom: 14.1vh;
+  right: -9.4vw;
+  opacity: 0.5;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
 // Description Section
 
 export const SectionDesc = styled.div`
@@ -41,8 +61,12 @@ export const NetworkCards = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1180px) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 778px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -59,7 +83,6 @@ export const SearchWrapper = styled.div`
 `;
 
 export const NetworkRewards = styled.div`
-  width: 24vw;
   padding: 15px;
   background-color: #1c1c3f;
   border-radius: 8px;

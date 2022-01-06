@@ -61,7 +61,7 @@ export const SocialLink = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  @media only screen and (width: 320px) {
+  @media only screen and (max-width: 425px) {
     display: none;
   }
 `;

@@ -3,6 +3,8 @@ import Select from "react-select";
 
 import {
   BalanceStick,
+  BeeRight,
+  BeeLeft,
   Container,
   DescTitle,
   NetworkCards,
@@ -21,6 +23,7 @@ import Header from "../layouts/Header";
 import Button from "../components/customs/Button";
 import Input from "../components/customs/Input/Input";
 
+import beeshape from "../assets/img/bee-shape.png";
 import calculator from "../assets/img/calculator.png";
 import price from "../assets/img/pencil.png";
 import coin from "../assets/img/star.png";
@@ -73,7 +76,13 @@ const Dashboard = () => {
   return (
     <Container>
       <Row flexDirection="column" alignItems="center">
-        <div className="col-md-9">
+        <div className="col-md-9 col-sm-9 col-xs-4">
+          <BeeLeft>
+            <img src={beeshape} alt="beeshape" />
+          </BeeLeft>
+          <BeeRight>
+            <img src={beeshape} alt="beeshape" />
+          </BeeRight>
           <Header />
           <SectionDesc>
             <Row
@@ -137,9 +146,30 @@ const Dashboard = () => {
                   justifyContent="space-between"
                   alignItems="center"
                   gap={10}
+                  responsive={{
+                    1180: {
+                      flexDirection: "column",
+                      justifyContent: "center",
+                    },
+                  }}
                 >
-                  <Col item={6}>
-                    <Row justifyContent="flex-start" gap={20}>
+                  <Col
+                    item={6}
+                    responsive={{
+                      1180: {
+                        item: 24,
+                      },
+                    }}
+                  >
+                    <Row
+                      justifyContent="flex-start"
+                      gap={20}
+                      responsive={{
+                        1180: {
+                          justifyContent: "center",
+                        },
+                      }}
+                    >
                       <BalanceStick />
                       <Text
                         mode="span"
@@ -150,11 +180,11 @@ const Dashboard = () => {
                         tSpacing={0.05}
                         responsive={{
                           768: {
-                            fSize: 35,
+                            fSize: 30,
                             lHeight: 40,
                             tSpacing: 0.03,
                           },
-                          1024: { fSize: 50, lHeight: 50, tSpacing: 0.03 },
+                          1470: { fSize: 30, lHeight: 40, tSpacing: 0.03 },
                           320: {
                             fSize: 30,
                             lHeight: 40,
@@ -167,18 +197,52 @@ const Dashboard = () => {
                       </Text>
                     </Row>
                   </Col>
-                  <Col item={18}>
-                    <Row justifyContent="center" alignItems="center" gap={25}>
+                  <Col
+                    item={18}
+                    responsive={{
+                      1180: {
+                        item: 24,
+                      },
+                      425: {
+                        item: 24,
+                      },
+                    }}
+                  >
+                    <Row
+                      justifyContent="center"
+                      alignItems="center"
+                      gap={25}
+                      responsive={{
+                        425: {
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        },
+                      }}
+                    >
                       <Col item={16}>
                         <Input
                           name="tokensearch"
                           placeholder="Search token to claim reward"
                         />
                       </Col>
-                      <Col item={8}>
+                      <Col
+                        item={8}
+                        responsive={{
+                          425: {
+                            item: 16,
+                          },
+                        }}
+                      >
                         <Select options={options} styles={customStyles} />
                       </Col>
-                      <Col item={8}>
+                      <Col
+                        item={8}
+                        responsive={{
+                          425: {
+                            item: 16,
+                          },
+                        }}
+                      >
                         <Select options={options} styles={customStyles} />
                       </Col>
                     </Row>
